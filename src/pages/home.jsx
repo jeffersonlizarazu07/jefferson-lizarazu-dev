@@ -4,7 +4,7 @@ import { useState } from "react";
 // import Header from "../components/Header";
 import Profile from "../components/Profile";
 import SocialLinks from "../components/SocialLinks";
-import CTAButton from "../components/CTAButton";
+import CTAButton from "../components/ProjectsButton.jsx";
 import BottomNav from "../components/BottomNav";
 
 export const FrontPage = () => {
