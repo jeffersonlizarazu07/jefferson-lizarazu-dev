@@ -26,41 +26,23 @@ export const FrontPage = () => {
   console.log(data);
 
   return (
-    <Box>
-      <Box>
-        <Header />
+    <Box
+      minHeight="100vh"
+      display="flex"
+      flexDirection="column"
+      sx={{
+        background: "linear-gradient(180deg, #0B1623, #0F1F30)",
+      }}
+    >
+      <Header />
+
+      <Box flex={1} display="flex" flexDirection="column" alignItems="center">
+        <Profile />
+        <SocialLinks />
+        <CTAButton />
       </Box>
 
-      <Box>
-        <Typography>Sobre mi</Typography>
-        <Typography>
-          Hola. Mi nombre es Jefferson Lizarazu. Soy desarrollador full stack y
-          he decidido crear un lugar donde pueda compartir con ustedes mis
-          proyectos realizados y aquellos proyectos que me encuentro realizando
-          actualmente.
-        </Typography>
-      </Box>
-
-      <Box>
-        <MainCard />
-        <Typography>Proyectos</Typography>
-        {data.map((item) => {
-          <Box key={data}>
-            <Typography>{item.id}</Typography>
-            <Typography>{item.name}</Typography>
-            <Typography>{item.description}</Typography>
-            <Typography>{item.programingLeguage}</Typography>
-          </Box>;
-        })}
-      </Box>
-
-      <Box>
-        <ContactForm />
-      </Box>
-
-      <Box>
-        <Footer />
-      </Box>
+      <BottomNav />
     </Box>
   );
 };
