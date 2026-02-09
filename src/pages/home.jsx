@@ -1,8 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import { Header, MainCard, ContactForm, Footer } from "../components";
 import { useState } from "react";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
+// import Header from "../components/Header";
+import Profile from "../components/Profile";
+import SocialLinks from "../components/SocialLinks";
+import CTAButton from "../components/CTAButton";
+import BottomNav from "../components/BottomNav";
 
 export const FrontPage = () => {
   // const [repos, setRepos] = useState([]);
