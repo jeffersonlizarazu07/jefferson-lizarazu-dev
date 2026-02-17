@@ -1,3 +1,4 @@
+import {navigate} from "react-router-dom"
 import {
   Box,
   Typography,
@@ -12,6 +13,8 @@ import {
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 export const Header = () => {
+
+  const nav = navigate("../../pages/aboutMe.jsx")
   return (
     <AppBar
       position="fixed"
@@ -46,13 +49,13 @@ export const Header = () => {
                 fontWeight: "bold",
               }}
             >
-              D
+              J
             </Box>
             <Typography
               variant="h6"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
-              DEV.FOLIO
+              PORTAFOLIO
             </Typography>
           </Stack>
 
@@ -68,7 +71,7 @@ export const Header = () => {
             <Link underline="none" color="grey.500">
               Projects
             </Link>
-            <Link underline="none" color="grey.500">
+            <Link underline="none" color="grey.500" >
               About me
             </Link>
             <Link underline="none" color="grey.500">
