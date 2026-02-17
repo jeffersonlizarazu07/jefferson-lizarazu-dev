@@ -1,21 +1,20 @@
 import {
-  AppBar,
-  Toolbar,
   Box,
   Button,
   Typography,
   Container,
-  IconButton,
   Grid,
   Stack,
   Paper,
   Link,
 } from "@mui/material";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Header } from "../components/layout/Header.jsx";
+import CircleIcon from "@mui/icons-material/Circle";
+import CodeIcon from "@mui/icons-material/Code";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 // import { useState } from "react";
-// import Header from "../components/Header";
+import { Header } from "../components/layout/Header.jsx";
 import { Profile } from "../components/Profile";
 import { SocialLinks } from "../components/SocialLinks.jsx";
 import { ProjectsButton } from "../components/ProjectsButton";
@@ -47,81 +46,7 @@ export const Home = () => {
         overflowX: "hidden",
       }}
     >
-      {/* ================= HEADER ================= */}
-      <AppBar
-        position="fixed"
-        elevation={0}
-        sx={{
-          backdropFilter: "blur(12px)",
-          background: "rgba(15,31,48,0.7)",
-        }}
-      >
-        <Toolbar
-          sx={{
-            width: "97%",
-            px: 3,
-            height: 80,
-            justifyContent: "space-between",
-          }}
-        >
-          {/* Logo */}
-          <Stack direction="row" spacing={1} alignItems="center">
-            <Box
-              sx={{
-                width: 32,
-                height: 32,
-                bgcolor: "primary.main",
-                borderRadius: 1,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontWeight: "bold",
-              }}
-            >
-              D
-            </Box>
-            <Typography
-              variant="h6"
-              sx={{ display: { xs: "none", sm: "block" } }}
-            >
-              DEV.FOLIO
-            </Typography>
-          </Stack>
-
-          {/* Nav Links Desktop */}
-          <Stack
-            direction="row"
-            spacing={4}
-            sx={{ display: { xs: "none", md: "flex" } }}
-          >
-            <Link underline="none" color="inherit">
-              Home
-            </Link>
-            <Link underline="none" color="grey.500">
-              Projects
-            </Link>
-            <Link underline="none" color="grey.500">
-              Skills
-            </Link>
-            <Link underline="none" color="grey.500">
-              Contact
-            </Link>
-          </Stack>
-
-          {/* Right Actions */}
-          <Stack
-            direction="row"
-            spacing={2}
-            alignItems="center"
-            sx={{ ml: "auto" }}
-          >
-            <IconButton color="inherit">
-              <DarkModeIcon />
-            </IconButton>
-            <Button variant="contained">Resume</Button>
-          </Stack>
-        </Toolbar>
-      </AppBar>
+      <Header />
 
       {/* ================= HERO ================= */}
       <Box
@@ -131,24 +56,29 @@ export const Home = () => {
           display: "flex",
           alignItems: "center",
           pt: 10,
+          marginTop: "6.25rem",
         }}
       >
         <Container maxWidth="xl">
-          <Grid container spacing={6} alignItems="center">
+          <Grid container spacing={10} alignItems="center">
             {/* LEFT CONTENT */}
             <Grid item xs={12} lg={6}>
               <Stack spacing={4}>
                 <Typography
-                  variant="overline"
                   sx={{
-                    bgcolor: "primary.main",
+                    background: "rgba(15,31,48,0.7)",
                     px: 2,
                     py: 1,
                     borderRadius: 5,
-                    display: "inline-block",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 1,
+                    color: "#4a7cd2",
+                    fontFamily: "sans-serif",
                   }}
                 >
-                  Available for Work
+                  <CircleIcon sx={{ fontSize: "17px" }} />
+                  AVAILABLE FOR WORK
                 </Typography>
 
                 <Typography
@@ -161,10 +91,13 @@ export const Home = () => {
                 >
                   Full Stack{" "}
                   <Box component="span" color="primary.main">
+                    <br />
                     Developer.
                   </Box>
                   <br />
-                  Building Digital Experiences.
+                  Building Digital
+                  <br />
+                  Experiences.
                 </Typography>
 
                 <Typography color="grey.400" maxWidth={500}>
@@ -182,15 +115,50 @@ export const Home = () => {
                     View My Work
                   </Button>
 
-                  <Button variant="outlined" size="large">
+                  <Button variant="outlined" size="large" color="#ffffff">
                     Contact Me
                   </Button>
                 </Stack>
 
-                <Stack direction="row" spacing={4} color="grey.500">
-                  <Link underline="none">GitHub</Link>
-                  <Link underline="none">LinkedIn</Link>
-                  <Link underline="none">Twitter</Link>
+                <Stack
+                  direction="row"
+                  spacing={4}
+                  color="grey.500"
+                  sx={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  <Link
+                    underline="none"
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                  >
+                    <CodeIcon />
+                    GitHub
+                  </Link>
+                  <Link
+                    underline="none"
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                  >
+                    <LinkedInIcon />
+                    LinkedIn
+                  </Link>
+                  <Link
+                    underline="none"
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 1,
+                    }}
+                  >
+                    <EmailIcon />
+                    Correo electrónico{" "}
+                  </Link>
                 </Stack>
               </Stack>
             </Grid>
@@ -200,7 +168,7 @@ export const Home = () => {
               item
               xs={12}
               lg={6}
-              sx={{ display: { xs: "none", lg: "block" } }}
+              sx={{ display: { xs: "none", lg: "block" }, width: "50%" }}
             >
               <Paper
                 elevation={10}
@@ -252,7 +220,7 @@ export const Home = () => {
             flexWrap="wrap"
             sx={{ opacity: 0.5 }}
           >
-            <Typography variant="h6">RE-ACT</Typography>
+            <Typography variant="h6">REACT</Typography>
             <Typography variant="h6">NEXT.JS</Typography>
             <Typography variant="h6">SUPABASE</Typography>
             <Typography variant="h6">TAILWIND</Typography>

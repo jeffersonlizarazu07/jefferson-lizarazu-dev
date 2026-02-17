@@ -1,26 +1,90 @@
-import { Box, Typography, IconButton } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import MenuIcon from "@mui/icons-material/Menu";
+import {
+  Box,
+  Typography,
+  IconButton,
+  AppBar,
+  Container,
+  Toolbar,
+  Stack,
+  Link,
+  Button,
+} from "@mui/material";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 export const Header = () => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-      px={3}
-      py={2}
+    <AppBar
+      position="fixed"
+      elevation={0}
+      sx={{
+        backdropFilter: "blur(12px)",
+        background: "rgba(15,31,48,0.7)",
+      }}
     >
-      <Typography fontWeight={600}>DevPortfolio</Typography>
+      <Container maxWidth="xl">
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            height: 80,
+            px: { xs: 2, sm: 3, md: 4 },
+          }}
+        >
+          {/* Logo */}
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Box
+              sx={{
+                width: 32,
+                height: 32,
+                bgcolor: "primary.main",
+                borderRadius: 1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: "bold",
+              }}
+            >
+              D
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{ display: { xs: "none", sm: "block" } }}
+            >
+              DEV.FOLIO
+            </Typography>
+          </Stack>
 
-      <Box>
-        <IconButton color="inherit">
-          <SearchIcon />
-        </IconButton>
-        <IconButton color="inherit">
-          <MenuIcon />
-        </IconButton>
-      </Box>
-    </Box>
+          {/* Nav Links Desktop */}
+          <Stack
+            direction="row"
+            spacing={4}
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
+            <Link underline="none" color="inherit">
+              Home
+            </Link>
+            <Link underline="none" color="grey.500">
+              Projects
+            </Link>
+            <Link underline="none" color="grey.500">
+              About me
+            </Link>
+            <Link underline="none" color="grey.500">
+              Contact
+            </Link>
+          </Stack>
+
+          {/* Right Actions */}
+          <Stack direction="row" spacing={2} alignItems="center">
+            <IconButton color="inherit">
+              <DarkModeIcon />
+            </IconButton>
+            <Button variant="contained">Resume</Button>
+          </Stack>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };

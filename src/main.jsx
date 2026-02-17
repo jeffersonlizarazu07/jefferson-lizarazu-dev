@@ -6,6 +6,6 @@ import { ProjectsPage } from './pages/projectsPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProjectsPage />
+    <Home />
   </StrictMode>,
 )
