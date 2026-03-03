@@ -2,10 +2,9 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
-import { AboutPage } from './pages/aboutPage'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <AboutPage />
+    <App />
   </BrowserRouter>,
 )

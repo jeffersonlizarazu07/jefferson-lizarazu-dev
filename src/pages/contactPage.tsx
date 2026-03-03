@@ -20,13 +20,15 @@ export const ContactPage = () => {
   return (
     <Box
       sx={{
+        bgcolor: "#0B1623",
+        color: "white",
+        overflowX: "hidden",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         py: 10,
         position: "relative",
         overflow: "hidden",
-        bgcolor: "background.default",
       }}
     >
       {/* Watermark */}
@@ -44,9 +46,7 @@ export const ContactPage = () => {
           pointerEvents: "none",
           userSelect: "none",
         }}
-      >
-        {"<CONTACT />"}
-      </Box>
+      ></Box>
 
       <Container maxWidth="xl" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={10} alignItems="center">
