@@ -1,12 +1,11 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {BrowserRoute} from "react-router-dom"
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
-import {Home} from './pages/home'
-import { ProjectsPage } from './pages/projectsPage'
+import App from './App'
+import { AboutPage } from './pages/aboutPage'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRoute>
-    <Home />
-  </BrowserRoute>,
+  <BrowserRouter>
+    <AboutPage />
+  </BrowserRouter>,
 )

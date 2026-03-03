@@ -50,11 +50,11 @@ export const ContactPage = () => {
 
       <Container maxWidth="xl" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={10} alignItems="center">
-          <Grid item xs={12} lg={7}>
+          <Grid size={{ xs: 12, lg: 7 }}>
             <ContactForm />
           </Grid>
 
-          <Grid item xs={12} lg={5}>
+          <Grid size={{ xs: 12, lg: 5 }}>
             <ContactSidebar />
           </Grid>
         </Grid>
@@ -106,29 +106,34 @@ const ContactForm = () => {
         </Typography>
 
         <Typography color="text.secondary" mt={2} maxWidth={500}>
-          Have a project in mind or just want to say hi? My inbox is always open.
+          Have a project in mind or just want to say hi? My inbox is always
+          open.
         </Typography>
       </Box>
 
       <Box component="form">
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <NeonField label="Your Name" />
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <NeonField label="Email Address" type="email" />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <NeonField label="Subject" />
           </Grid>
 
-          <Grid item xs={12}>
-            <NeonField label="Tell me about your project..." multiline rows={5} />
+          <Grid size={{ xs: 12 }}>
+            <NeonField
+              label="Tell me about your project..."
+              multiline
+              rows={5}
+            />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <GlassButton />
           </Grid>
         </Grid>
@@ -139,7 +144,12 @@ const ContactForm = () => {
 
 // Campo Neon
 
-const NeonField = ({ label, multiline = false, rows = 1, type = "text" }: any) => {
+const NeonField = ({
+  label,
+  multiline = false,
+  rows = 1,
+  type = "text",
+}: any) => {
   return (
     <TextField
       fullWidth
@@ -166,7 +176,6 @@ const NeonField = ({ label, multiline = false, rows = 1, type = "text" }: any) =
     />
   );
 };
-
 
 // Glass Button
 
@@ -195,7 +204,6 @@ const GlassButton = () => {
     </Button>
   );
 };
-
 
 // Sidebar
 
@@ -235,9 +243,7 @@ const DirectContact = () => {
   );
 };
 
-
 // Contact Item Reutilizable
-
 
 const ContactItem = ({ icon, title, value }: any) => {
   return (
@@ -280,7 +286,6 @@ const ContactItem = ({ icon, title, value }: any) => {
   );
 };
 
-
 // Social Channels
 
 const SocialChannels = () => {
@@ -315,7 +320,6 @@ const SocialChannels = () => {
     </Stack>
   );
 };
-
 
 // Mini-map
 
@@ -353,4 +357,3 @@ const MiniMap = () => {
     </Box>
   );
 };
-
