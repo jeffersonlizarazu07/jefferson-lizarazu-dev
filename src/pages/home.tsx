@@ -59,7 +59,7 @@ export const Home = () => {
         <Container maxWidth="xl">
           <Grid container spacing={10} alignItems="center">
             {/* LEFT CONTENT */}
-            <Grid item xs={12} lg={6}>
+            <Grid size={{ xs: 12, lg: 6 }}>
               <Stack spacing={4}>
                 <Typography
                   sx={{
@@ -112,7 +112,11 @@ export const Home = () => {
                     View My Work
                   </Button>
 
-                  <Button variant="outlined" size="large" color="#ffffff">
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    sx={{ color: "#ffffff" }}
+                  >
                     Contact Me
                   </Button>
                 </Stack>
@@ -162,9 +166,7 @@ export const Home = () => {
 
             {/* RIGHT VISUAL */}
             <Grid
-              item
-              xs={12}
-              lg={6}
+              size={{ xs: 12, lg: 6 }}
               sx={{ display: { xs: "none", lg: "block" }, width: "50%" }}
             >
               <Paper
