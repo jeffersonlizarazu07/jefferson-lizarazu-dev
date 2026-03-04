@@ -13,7 +13,8 @@ import DownloadIcon from "@mui/icons-material/Download";
 import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
 import HubIcon from "@mui/icons-material/Hub";
 import LayersIcon from "@mui/icons-material/Layers";
-import ReactIcon from '../assets/react.svg?react'
+import ReactIcon from "../assets/react.svg?react";
+import { Header } from "../components/layout/Header";
 
 export const AboutPage = () => {
   return (
@@ -42,6 +43,7 @@ export const AboutPage = () => {
           borderRadius: "50%",
         }}
       />
+      <Header />
       <Box
         sx={{
           position: "absolute",
@@ -115,7 +117,7 @@ const AboutSection = () => {
       <Grid size={{ xs: 12, lg: 7 }}>
         <Stack spacing={5}>
           <Chip
-            label="About My Journey"
+            label="About me"
             sx={{
               bgcolor: "primary.main",
               color: "white",
@@ -163,7 +165,7 @@ const AboutSection = () => {
 
 // Tech Section
 const techStack = [
-  { name: "React", icon: <ReactIcon />  },
+  { name: "React", icon: <ReactIcon /> },
   { name: "TypeScript", icon: "TS" },
   { name: "Node.js", icon: <SettingsInputComponentIcon /> },
   { name: "GraphQL", icon: <HubIcon /> },
