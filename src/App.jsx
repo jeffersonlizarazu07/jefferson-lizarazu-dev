@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/home";
-import { AboutPage } from "./pages/aboutPage";
-import { ContactPage } from "./pages/contactPage";
-import { ProjectsPage } from "./pages/projectsPage";
-import { NotFound } from "./pages/notFound";
+import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

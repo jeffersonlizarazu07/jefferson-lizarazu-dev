@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
   return (
     <Typography
       sx={{

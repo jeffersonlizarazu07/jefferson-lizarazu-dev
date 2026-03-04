@@ -16,8 +16,9 @@ import EmailIcon from "@mui/icons-material/Email";
 // import { useState } from "react";
 import { Header } from "../components/layout/Header.jsx";
 import { Footer } from "../components/layout/Footer.jsx";
+import { TechRow } from "../components/home/TechRow.js";
 
-export const Home = () => {
+export const HomePage = () => {
   // const [repos, setRepos] = useState([]);
   // const [data, setData] = useState([]);
 
@@ -204,30 +205,7 @@ export const Home = () => {
           </Grid>
         </Container>
       </Box>
-
-      {/* ================= TECH STRIP ================= */}
-      <Box
-        sx={{
-          borderTop: "1px solid rgba(255,255,255,0.1)",
-          py: 10,
-        }}
-      >
-        <Container maxWidth="xl">
-          <Stack
-            direction="row"
-            spacing={8}
-            justifyContent="space-between"
-            flexWrap="wrap"
-            sx={{ opacity: 0.5 }}
-          >
-            <Typography variant="h6">REACT</Typography>
-            <Typography variant="h6">NEXT.JS</Typography>
-            <Typography variant="h6">SUPABASE</Typography>
-            <Typography variant="h6">TAILWIND</Typography>
-            <Typography variant="h6">VERCEL</Typography>
-          </Stack>
-        </Container>
-      </Box>
+      <TechRow />
       <Footer />
     </Box>
   );
