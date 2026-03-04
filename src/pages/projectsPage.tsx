@@ -14,7 +14,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CodeIcon from "@mui/icons-material/Code";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Header } from "../components/layout/Header";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/layout/Footer";
 
 export const ProjectsPage = () => {
   const projects = [
@@ -36,7 +36,7 @@ export const ProjectsPage = () => {
     },
   ];
   return (
-    <Box sx={{ bgcolor: "#101622", color: "white", minHeight: "100vh", px: 6}}>
+    <Box sx={{ bgcolor: "#101622", color: "white", minHeight: "100vh", px: 6 }}>
       {/* HEADER */}
       <Header />
       {/* MAIN */}

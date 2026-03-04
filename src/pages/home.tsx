@@ -15,7 +15,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 // import { useState } from "react";
 import { Header } from "../components/layout/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
+import { Footer } from "../components/layout/Footer.jsx";
 
 export const Home = () => {
   // const [repos, setRepos] = useState([]);
@@ -41,7 +41,7 @@ export const Home = () => {
         bgcolor: "#0B1623",
         color: "white",
         overflowX: "hidden",
-        p: 6
+        p: 6,
       }}
     >
       <Header />

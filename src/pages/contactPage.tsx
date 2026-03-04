@@ -16,7 +16,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Header } from "../components/layout/Header";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/layout/Footer";
 
 export const ContactPage = () => {
   return (

@@ -15,7 +15,7 @@ import HubIcon from "@mui/icons-material/Hub";
 import LayersIcon from "@mui/icons-material/Layers";
 import ReactIcon from "../assets/react.svg?react";
 import { Header } from "../components/layout/Header";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/layout/Footer";
 
 export const AboutPage = () => {
   return (
