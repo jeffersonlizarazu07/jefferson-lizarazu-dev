@@ -180,21 +180,6 @@ export const ProjectsPage = () => {
           </Stack>
         </Box>
       </Container>
-
-      {/* Scroll to top */}
-      <IconButton
-        sx={{
-          position: "fixed",
-          bottom: 30,
-          right: 30,
-          bgcolor: "rgba(43,108,238,0.2)",
-          color: "primary.main",
-          "&:hover": {
-            bgcolor: "primary.main",
-            color: "white",
-          },
-        }}
-      ></IconButton>
       <Footer />
     </Box>
   );
