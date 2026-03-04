@@ -23,6 +23,7 @@ export const AboutPage = () => {
       sx={{
         minHeight: "100vh",
         py: 12,
+        px: 6,
         position: "relative",
         overflow: "hidden",
         bgcolor: "#0B1623",

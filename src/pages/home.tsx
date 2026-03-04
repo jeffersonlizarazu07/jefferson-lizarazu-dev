@@ -41,6 +41,7 @@ export const Home = () => {
         bgcolor: "#0B1623",
         color: "white",
         overflowX: "hidden",
+        p: 6
       }}
     >
       <Header />

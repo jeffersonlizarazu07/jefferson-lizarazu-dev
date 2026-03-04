@@ -13,7 +13,6 @@ import SendIcon from "@mui/icons-material/Send";
 import EmailIcon from "@mui/icons-material/AlternateEmail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import RemoveIcon from "@mui/icons-material/Remove";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Header } from "../components/layout/Header";
