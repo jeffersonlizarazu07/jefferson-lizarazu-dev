@@ -16,10 +16,6 @@ import EmailIcon from "@mui/icons-material/Email";
 // import { useState } from "react";
 import { Header } from "../components/layout/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
-import { Profile } from "../components/Profile";
-import { SocialLinks } from "../components/SocialLinks.jsx";
-import { ProjectsButton } from "../components/ProjectsButton";
-import { BottomNav } from "../components/BottomNav.jsx";
 
 export const Home = () => {
   // const [repos, setRepos] = useState([]);
