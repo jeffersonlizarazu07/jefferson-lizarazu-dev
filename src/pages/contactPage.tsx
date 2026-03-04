@@ -13,6 +13,7 @@ import EmailIcon from "@mui/icons-material/AlternateEmail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { Header } from "../components/layout/Header";
+import { Footer } from "../components/Footer";
 
 export const ContactPage = () => {
   return (
@@ -60,6 +61,7 @@ export const ContactPage = () => {
             <ContactSidebar />
           </Grid>
         </Grid>
+        <Footer />
       </Container>
 
       {/* Background Glow */}
