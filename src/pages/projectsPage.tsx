@@ -14,6 +14,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CodeIcon from "@mui/icons-material/Code";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Header } from "../components/layout/Header";
+import { Footer } from "../components/Footer";
 
 export const ProjectsPage = () => {
   const projects = [
@@ -193,9 +194,8 @@ export const ProjectsPage = () => {
             color: "white",
           },
         }}
-      >
-        <ArrowUpwardIcon />
-      </IconButton>
+      ></IconButton>
+      <Footer />
     </Box>
   );
 };
