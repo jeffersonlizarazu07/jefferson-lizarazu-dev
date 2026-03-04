@@ -103,7 +103,7 @@ export const ProjectsPage = () => {
         {/* GRID */}
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid item xs={12} md={6} lg={4} key={index}>
+            <Grid size={{ xs: 12, md: 6, lg: 4 }} key={index}>
               <Card
                 sx={{
                   position: "relative",
