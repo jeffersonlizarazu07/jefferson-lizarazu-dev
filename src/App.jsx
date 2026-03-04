@@ -3,6 +3,7 @@ import { Home } from "./pages/home";
 import { AboutPage } from "./pages/aboutPage";
 import { ContactPage } from "./pages/contactPage";
 import { ProjectsPage } from "./pages/projectsPage";
+import { NotFound } from "./pages/notFound";
 
 function App() {
   // const Home = () => (Element) => <h1>Home</h1>;
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
