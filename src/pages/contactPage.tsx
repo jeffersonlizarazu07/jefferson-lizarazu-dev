@@ -7,11 +7,15 @@ import {
   Button,
   Stack,
   Card,
+  Avatar,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import EmailIcon from "@mui/icons-material/AlternateEmail";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/Footer";
 
@@ -25,7 +29,7 @@ export const ContactPage = () => {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        py: 10,
+        p: 6,
         position: "relative",
         overflow: "hidden",
       }}
@@ -52,7 +56,7 @@ export const ContactPage = () => {
         maxWidth="xl"
         sx={{ position: "relative", zIndex: 2, marginTop: "6.25rem" }}
       >
-        <Grid container spacing={10} alignItems="center">
+        <Grid container spacing={10} alignItems="center" marginBottom="3rem">
           <Grid size={{ xs: 12, lg: 7 }}>
             <ContactForm />
           </Grid>
@@ -109,7 +113,7 @@ const ContactForm = () => {
           .
         </Typography>
 
-        <Typography color="text.secondary" mt={2} maxWidth={500}>
+        <Typography color="#94a3b8" mt={2} maxWidth={500}>
           Have a project in mind or just want to say hi? My inbox is always
           open.
         </Typography>
@@ -118,15 +122,15 @@ const ContactForm = () => {
       <Box component="form">
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <NeonField label="Your Name" />
+            <NeonField label="Your Name" color="#94a3b8" />
           </Grid>
 
           <Grid size={{ xs: 12, md: 6 }}>
-            <NeonField label="Email Address" type="email" />
+            <NeonField label="Email Address" type="email" color="#94a3b8" />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <NeonField label="Subject" />
+            <NeonField label="Subject" color="#94a3b8" />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
@@ -134,6 +138,7 @@ const ContactForm = () => {
               label="Tell me about your project..."
               multiline
               rows={5}
+              color="#94a3b8"
             />
           </Grid>
 
@@ -153,6 +158,7 @@ const NeonField = ({
   multiline = false,
   rows = 1,
   type = "text",
+  color,
 }: any) => {
   return (
     <TextField
@@ -163,10 +169,12 @@ const NeonField = ({
       rows={rows}
       type={type}
       sx={{
+        "& .MuiInputLabel-root": { color: color },
+        "& .MuiInputLabel-root.Mui-focused": { color: color },
         "& .MuiOutlinedInput-root": {
           transition: "0.3s",
           "& fieldset": {
-            borderColor: "divider",
+            borderColor: color || "divider",
           },
           "&:hover fieldset": {
             borderColor: "primary.main",
@@ -216,7 +224,6 @@ const ContactSidebar = () => {
     <Stack spacing={8}>
       <DirectContact />
       <SocialChannels />
-      <MiniMap />
     </Stack>
   );
 };
@@ -226,21 +233,26 @@ const ContactSidebar = () => {
 const DirectContact = () => {
   return (
     <Stack spacing={4}>
-      <Typography variant="h6" fontWeight={700}>
+      <Typography
+        variant="h6"
+        fontWeight={700}
+        sx={{ display: "flex", alignItems: "center", color: "primary.main" }}
+      >
+        <RemoveIcon sx={{ width: "100px", fontSize: "80px" }} />
         Direct Contact
       </Typography>
 
       <Stack spacing={3}>
         <ContactItem
-          icon={<EmailIcon />}
+          icon={<EmailIcon sx={{ color: "#2b6cee" }} />}
           title="Email Me"
-          value="hello@developer.com"
+          value="jeffersonlizarazu@hotmail.com"
         />
 
         <ContactItem
-          icon={<LocationOnIcon />}
+          icon={<LocationOnIcon sx={{ color: "#2b6cee" }} />}
           title="Location"
-          value="Remote / San Francisco, CA"
+          value="Bogotá D.C, Colombia"
         />
       </Stack>
     </Stack>
@@ -249,7 +261,21 @@ const DirectContact = () => {
 
 // Contact Item Reutilizable
 
-const ContactItem = ({ icon, title, value }: any) => {
+interface ContactItemProps {
+  icon: React.ReactNode;
+  title: string;
+  value: string;
+  titleColor?: string;
+  valueColor?: string;
+}
+
+const ContactItem = ({
+  icon,
+  title,
+  value,
+  titleColor = "#64748b",
+  valueColor = "#ffffff",
+}: ContactItemProps) => {
   return (
     <Stack
       direction="row"
@@ -269,8 +295,8 @@ const ContactItem = ({ icon, title, value }: any) => {
           width: 48,
           height: 48,
           borderRadius: 2,
-          bgcolor: "primary.main",
-          opacity: 0.1,
+          bgcolor: "#1e293b",
+
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -281,7 +307,7 @@ const ContactItem = ({ icon, title, value }: any) => {
       </Box>
 
       <Box>
-        <Typography variant="caption" color="text.secondary">
+        <Typography variant="caption" color="#64748b" fontSize="15px">
           {title}
         </Typography>
         <Typography fontWeight={600}>{value}</Typography>
@@ -293,71 +319,71 @@ const ContactItem = ({ icon, title, value }: any) => {
 // Social Channels
 
 const SocialChannels = () => {
-  const socials = ["LinkedIn", "GitHub", "Twitter / X"];
+  const socialsAndIcons = [
+    { name: "Linledin", Icon: LinkedInIcon },
+    { name: "GitHub", Icon: GitHubIcon },
+  ];
 
   return (
     <Stack spacing={3}>
-      <Typography variant="h6" fontWeight={700}>
+      <Typography
+        variant="h6"
+        fontWeight={900}
+        sx={{ display: "flex", alignItems: "center", color: "primary.main" }}
+      >
+        <RemoveIcon sx={{ width: "100px", fontSize: "80px" }} />
         Social Channels
       </Typography>
+      {socialsAndIcons.map((item, index) => {
+        const { Icon, name } = item;
+        return (
+          <Card
+            key={index}
+            sx={{
+              p: 2,
+              border: "1px solid",
+              borderRadius: 2,
+              borderColor: "#94a3b8",
+              transition: "0.3s",
+              bgcolor: "#0B1623",
 
-      {socials.map((name, index) => (
-        <Card
-          key={index}
-          sx={{
-            p: 2,
-            border: "1px solid",
-            borderColor: "divider",
-            transition: "0.3s",
-            "&:hover": {
-              transform: "translateX(8px)",
-              borderColor: "primary.main",
-            },
-          }}
-        >
-          <Stack direction="row" justifyContent="space-between">
-            <Typography fontWeight={500}>{name}</Typography>
-            <NorthEastIcon sx={{ opacity: 0.5 }} />
-          </Stack>
-        </Card>
-      ))}
+              "&:hover": {
+                transform: "translateX(8px)",
+                borderColor: "primary.main",
+              },
+            }}
+          >
+            <Stack direction="row" justifyContent="space-between">
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  alignContent: "center",
+                  gap: 2,
+                }}
+              >
+                <Avatar
+                  variant="rounded"
+                  sx={{
+                    backgroundColor: "#1e293b",
+                    padding: "1px",
+                    width: 45,
+                    height: 45,
+                    transition: "0.3s",
+                  }}
+                >
+                  <Icon
+                    sx={{ color: "#94a3b8", fontSize: "2rem", boxShadow: 5 }}
+                  />
+                </Avatar>
+                <Typography fontWeight={500} color="#ffffff">
+                  {name}
+                </Typography>
+              </Box>
+            </Stack>
+          </Card>
+        );
+      })}
     </Stack>
-  );
-};
-
-// Mini-map
-
-const MiniMap = () => {
-  return (
-    <Box
-      sx={{
-        height: 120,
-        borderRadius: 3,
-        overflow: "hidden",
-        position: "relative",
-        border: "1px solid",
-        borderColor: "divider",
-        filter: "grayscale(100%)",
-        transition: "0.4s",
-        "&:hover": {
-          filter: "grayscale(0%)",
-        },
-      }}
-    >
-      <Box
-        component="img"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAWafgX0XvzYy-jFumXDtEPx5ocBxwbYsrvolrmBAVP0408rhujOl8b8o7DSl8tSqybLPAh6KP46NYj6v9lC7XNCY3qEZXGGzhwnIdfRZrBH8zftRYtlUYsXi4JA06HoYJI2FjTy6XzmftskKHtY0VJgY0hhgDr2oZx9oHVeFPwCbya6XN-vMbY91U7XF__yZ2J4iZHhDHKjtrxp85SP-hLY09yIGxGv5kBb5aLfqEu5uOO5NwJ5XyJbrX5xkEntq0cM5VtLqYToo"
-        sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
-
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
-          bgcolor: "primary.main",
-          opacity: 0.2,
-        }}
-      />
-    </Box>
   );
 };
