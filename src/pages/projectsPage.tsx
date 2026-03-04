@@ -1,6 +1,4 @@
 import {
-  AppBar,
-  Toolbar,
   Container,
   Box,
   Typography,
@@ -9,14 +7,13 @@ import {
   Grid,
   Card,
   CardMedia,
-  CardContent,
   Chip,
   IconButton,
-  Link,
 } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CodeIcon from "@mui/icons-material/Code";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { Header } from "../components/layout/Header";
 
 export const ProjectsPage = () => {
   const projects = [
@@ -40,45 +37,11 @@ export const ProjectsPage = () => {
   return (
     <Box sx={{ bgcolor: "#101622", color: "white", minHeight: "100vh" }}>
       {/* HEADER */}
-      <AppBar
-        position="sticky"
-        elevation={0}
-        sx={{ bgcolor: "rgba(16,22,34,0.8)", backdropFilter: "blur(10px)" }}
-      >
-        <Toolbar sx={{ height: 80 }}>
-          <Typography variant="h6" fontWeight={700}>
-            PORTFOLIO
-          </Typography>
-
-          <Stack
-            direction="row"
-            spacing={4}
-            sx={{ ml: "auto", display: { xs: "none", md: "flex" } }}
-          >
-            <Link underline="none" color="inherit">
-              Home
-            </Link>
-            <Link underline="none" color="primary.main">
-              Projects
-            </Link>
-            <Link underline="none" color="inherit">
-              About
-            </Link>
-            <Link underline="none" color="inherit">
-              Contact
-            </Link>
-          </Stack>
-
-          <Button variant="contained" sx={{ ml: 3 }}>
-            Let's Talk
-          </Button>
-        </Toolbar>
-      </AppBar>
-
+      <Header />
       {/* MAIN */}
       <Container maxWidth="xl" sx={{ py: 10 }}>
         {/* SECTION HEADER */}
-        <Box maxWidth={600} mb={8}>
+        <Box maxWidth={600} mb={8} marginTop={6}>
           <Typography variant="h3" fontWeight={700} gutterBottom>
             Selected{" "}
             <Box component="span" color="primary.main">
