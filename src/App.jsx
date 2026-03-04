@@ -6,13 +6,6 @@ import { ProjectsPage } from "./pages/projectsPage";
 import { NotFound } from "./pages/notFound";
 
 function App() {
-  // const Home = () => (Element) => <h1>Home</h1>;
-
-  // const aboutPage = () => (Element) => <h1>About Me</h1>;
-
-  // const myProjects = () => (Element) => <h1>My Porjects</h1>;
-
-  // const ContactPage = () => (Element) => <h1>Contact me</h1>;
   return (
     <div>
       <Routes>

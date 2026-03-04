@@ -134,13 +134,13 @@ const AboutSection = () => {
             </Box>
           </Typography>
 
-          <Typography color="text.secondary" fontSize={18}>
+          <Typography color="#ffffff" fontSize={18}>
             I am a Senior Full-Stack Developer passionate about crafting
             high-performance web applications that merge elegant design with
             robust engineering.
           </Typography>
 
-          <Typography color="text.secondary" fontSize={18}>
+          <Typography color="#ffffff" fontSize={18}>
             I focus on user experience and scalable architecture. Modern
             software should work flawlessly and feel intuitive.
           </Typography>
@@ -184,7 +184,7 @@ const TechSection = () => {
             <Typography variant="h4" fontWeight={800}>
               My Ecosystem
             </Typography>
-            <Typography color="text.secondary" maxWidth={500}>
+            <Typography color="#ffffff" maxWidth={500}>
               I specialize in modern JavaScript ecosystems and cloud-native
               architectures.
             </Typography>
@@ -220,7 +220,9 @@ const TechSection = () => {
                   >
                     {tech.icon}
                   </Box>
-                  <Typography fontWeight={700}>{tech.name}</Typography>
+                  <Typography fontWeight={700} color="#ffffff">
+                    {tech.name}
+                  </Typography>
                 </CardContent>
               </Card>
             </Grid>
@@ -250,7 +252,7 @@ const TechSection = () => {
                 <Typography variant="h4" fontWeight={800}>
                   {stat.value}
                 </Typography>
-                <Typography variant="caption" color="text.secondary">
+                <Typography variant="caption" color="#64748b">
                   {stat.label.toUpperCase()}
                 </Typography>
               </Grid>
