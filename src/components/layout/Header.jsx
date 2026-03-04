@@ -6,16 +6,12 @@ import {
   Container,
   Toolbar,
   Stack,
-  Link,
   Button,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 export const Header = () => {
-
-  
-
-  
   return (
     <AppBar
       position="fixed"
@@ -66,16 +62,16 @@ export const Header = () => {
             spacing={4}
             sx={{ display: { xs: "none", md: "flex" } }}
           >
-            <Link underline="none" color="inherit">
+            <Link to="/" underline="none" color="inherit">
               Home
             </Link>
-            <Link underline="none" color="grey.500">
+            <Link to="/projects" underline="none" color="grey.500">
               Projects
             </Link>
-            <Link underline="none" color="grey.500">
+            <Link to="/about" underline="none" color="grey.500">
               About me
             </Link>
-            <Link underline="none" color="grey.500">
+            <Link to="/contact" underline="none" color="grey.500">
               Contact
             </Link>
           </Stack>
