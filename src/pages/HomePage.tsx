@@ -17,6 +17,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { Header } from "../components/layout/Header.jsx";
 import { Footer } from "../components/layout/Footer.jsx";
 import { TechRow } from "../components/home/TechRow.js";
+import { CodeImage } from "../components/home/CodeImage.js";
 
 export const HomePage = () => {
   // const [repos, setRepos] = useState([]);
@@ -35,6 +36,9 @@ export const HomePage = () => {
   //   getRepositories();
   // };
   // console.log(data);
+
+  // const ThemeConfigCode = () => {
+  //   const symbolColor = "#89ddff";
 
   return (
     <Box
@@ -165,43 +169,7 @@ export const HomePage = () => {
                 </Stack>
               </Stack>
             </Grid>
-
-            {/* RIGHT VISUAL */}
-            <Grid
-              size={{ xs: 12, lg: 6 }}
-              sx={{ display: { xs: "none", lg: "block" }, width: "50%" }}
-            >
-              <Paper
-                elevation={10}
-                sx={{
-                  p: 4,
-                  bgcolor: "#0F1F30",
-                  borderRadius: 3,
-                }}
-              >
-                <Typography variant="subtitle2" color="grey.500">
-                  App.tsx
-                </Typography>
-
-                <Box
-                  component="pre"
-                  sx={{
-                    mt: 2,
-                    fontFamily: "monospace",
-                    fontSize: 14,
-                    color: "primary.main",
-                  }}
-                >
-                  {`const Developer = () => {
-  const [skills] = useState([
-    "React", "Node.js", "TypeScript"
-  ]);
-
-  return <Hero title="Full Stack" />;
-};`}
-                </Box>
-              </Paper>
-            </Grid>
+            <CodeImage />
           </Grid>
         </Container>
       </Box>
