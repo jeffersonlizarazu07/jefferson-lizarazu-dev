@@ -51,7 +51,7 @@ export const Header = () => {
             <Link to="/">
               <Typography
                 variant="h6"
-                sx={{ display: { xs: "none", sm: "block", color: "#ffffff" } }}
+                sx={{ display: { xs: "none", sm: "block", color: "#ffffff" }}}
               >
                 PORTAFOLIO
               </Typography>
