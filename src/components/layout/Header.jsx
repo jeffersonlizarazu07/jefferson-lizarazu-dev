@@ -48,12 +48,14 @@ export const Header = () => {
             >
               J
             </Box>
-            <Typography
-              variant="h6"
-              sx={{ display: { xs: "none", sm: "block" } }}
-            >
-              PORTAFOLIO
-            </Typography>
+            <Link to="/">
+              <Typography
+                variant="h6"
+                sx={{ display: { xs: "none", sm: "block", color: "#ffffff" } }}
+              >
+                PORTAFOLIO
+              </Typography>
+            </Link>
           </Stack>
 
           {/* Nav Links Desktop */}
