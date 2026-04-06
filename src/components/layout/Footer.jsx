@@ -1,6 +1,11 @@
 import { Box, Container, Stack, Typography, Link } from "@mui/material";
+import { SocialLinks } from "./common/SocialLinks";
+import { NavLinks } from "./common/NavLinks";
 
 export const Footer = () => {
+  const name = "Jefferson Johan Lizarazu Rondon";
+  const actualYear = new Date().getFullYear();
+
   return (
     <Box
       sx={{
@@ -12,22 +17,28 @@ export const Footer = () => {
         <Stack
           direction={{ xs: "column", md: "row" }}
           justifyContent="space-between"
-          alignItems="center"
+          alignItems={{ xs: "flex-start", md: "center" }}
           spacing={2}
         >
-          <Typography variant="body2" color="grey.500">
-            © 2024 DEV.FOLIO. All rights reserved.
-          </Typography>
+          <Box>
+            <Typography variant="h6" fontWeight="bold">
+              {name}
+            </Typography>
 
-          <Stack direction="row" spacing={4}>
-            <Link underline="none" color="grey.500">
-              Privacy Policy
-            </Link>
-            <Link underline="none" color="grey.500">
-              Terms of Service
-            </Link>
-          </Stack>
+            <Typography variant="body2" color="grey.500">
+              Desarrollador Full Stack
+            </Typography>
+          </Box>
+
+          <NavLinks direction="row" spacing={4} />
+
+          <SocialLinks showLabels={false} />
         </Stack>
+        <Box pt={1.5}>
+          <Typography variant="caption">
+            © {actualYear} {name}.
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );

@@ -23,3 +23,16 @@ dist-ssr
 *.sln
 *.sw?
 *.env
+
+# Screenshots
+footer-*.png
+
+# OpenCode
+.git/opencode
+.skills-lock.json
+
+# Playwright
+.playwright-mcp
+.agents/skills/frontend-design/SKILL.md
+.agents/skills/frontend-design/LICENSE.txt
+skills-lock.json
