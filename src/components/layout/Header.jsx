@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { NavLinks } from "./common/NavLinks";
 
 export const Header = () => {
   return (
@@ -51,32 +52,13 @@ export const Header = () => {
             <Link to="/">
               <Typography
                 variant="h6"
-                sx={{ display: { xs: "none", sm: "block", color: "#ffffff" }}}
+                sx={{ display: { xs: "none", sm: "block", color: "#ffffff" } }}
               >
                 PORTAFOLIO
               </Typography>
             </Link>
           </Stack>
-
-          {/* Nav Links Desktop */}
-          <Stack
-            direction="row"
-            spacing={4}
-            sx={{ display: { xs: "none", md: "flex" } }}
-          >
-            <Link to="/" underline="none" color="inherit">
-              Home
-            </Link>
-            <Link to="/projects" underline="none" color="grey.500">
-              Projects
-            </Link>
-            <Link to="/about" underline="none" color="grey.500">
-              About me
-            </Link>
-            <Link to="/contact" underline="none" color="grey.500">
-              Contact
-            </Link>
-          </Stack>
+          <NavLinks />
 
           {/* Right Actions */}
           <Stack direction="row" spacing={2} alignItems="center">

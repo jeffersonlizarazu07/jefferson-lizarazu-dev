@@ -1,18 +1,10 @@
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  Link,
-} from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
-import EmailIcon from "@mui/icons-material/Email";
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import CodeIcon from "@mui/icons-material/Code";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import { CodeImage } from "../home/CodeImage";
+import { SocialLinks } from "../layout/common/SocialLinks";
 
 export const Hero = () => {
   return (
@@ -45,7 +37,7 @@ export const Hero = () => {
                 }}
               >
                 <CircleIcon sx={{ fontSize: "17px" }} />
-                AVAILABLE FOR WORK
+                DISPONIBLE
               </Typography>
 
               <Typography
@@ -62,15 +54,16 @@ export const Hero = () => {
                   Developer.
                 </Box>
                 <br />
-                Building Digital
+                Creación de experiencias
                 <br />
-                Experiences.
+                digitales.
               </Typography>
 
               <Typography color="grey.400" maxWidth={500}>
-                Crafting high-performance web applications with modern tech
-                stacks. Focused on building scalable, user-centric solutions
-                that solve real-world problems.
+                He trabajado en el desarrollo de soluciones web utilizando React
+                en el frontend y Node.js (Express) en el backend. Me enfoco en
+                crear aplicaciones funcionales, escalables y orientadas a
+                resolver problemas reales.
               </Typography>
 
               <Stack direction="row" spacing={3}>
@@ -90,47 +83,7 @@ export const Hero = () => {
                   Contact Me
                 </Button>
               </Stack>
-
-              <Stack
-                direction="row"
-                spacing={4}
-                color="grey.500"
-                sx={{ display: "inline-flex", alignItems: "center" }}
-              >
-                <Link
-                  underline="none"
-                  sx={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 1,
-                  }}
-                >
-                  <CodeIcon />
-                  GitHub
-                </Link>
-                <Link
-                  underline="none"
-                  sx={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 1,
-                  }}
-                >
-                  <LinkedInIcon />
-                  LinkedIn
-                </Link>
-                <Link
-                  underline="none"
-                  sx={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 1,
-                  }}
-                >
-                  <EmailIcon />
-                  Correo electrónico{" "}
-                </Link>
-              </Stack>
+              <SocialLinks />
             </Stack>
           </Grid>
           <CodeImage />

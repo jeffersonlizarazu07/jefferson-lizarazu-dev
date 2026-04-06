@@ -17,8 +17,9 @@ export const TechRow = () => {
           sx={{ opacity: 0.5 }}
         >
           <Typography variant="h6">REACT</Typography>
-          <Typography variant="h6">NEXT.JS</Typography>
-          <Typography variant="h6">SUPABASE</Typography>
+          <Typography variant="h6">EXPRESS</Typography>
+          <Typography variant="h6">JAVA</Typography>
+          <Typography variant="h6">VITE</Typography>
           <Typography variant="h6">TAILWIND</Typography>
           <Typography variant="h6">VERCEL</Typography>
         </Stack>
