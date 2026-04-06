@@ -31,7 +31,7 @@ export const HomePage = () => {
         bgcolor: "#0B1623",
         color: "white",
         overflowX: "hidden",
-        p: 6,
+        pt: 6, px: 6, pb: 0
       }}
     >
       <Header />

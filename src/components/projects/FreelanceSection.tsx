@@ -9,12 +9,11 @@ export const FreelanceSection = () => {
       borderTop="1px solid rgba(255,255,255,0.1)"
     >
       <Typography variant="h4" fontWeight={700} mb={3}>
-        Have a project in mind?
+        ¿Tienes un proyecto en mente?
       </Typography>
 
       <Typography color="grey.400" maxWidth={600} mx="auto" mb={5}>
-        I'm currently available for freelance work. Let's build something
-        exceptional together.
+        Actualmente me encuentro disponible como desarrollador freelance. Puedo ayudarte a convertir tu idea en una aplicación web funcional y escalable.
       </Typography>
 
       <Stack
