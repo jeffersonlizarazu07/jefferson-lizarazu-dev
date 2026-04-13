@@ -36,3 +36,6 @@ footer-*.png
 .agents/skills/frontend-design/SKILL.md
 .agents/skills/frontend-design/LICENSE.txt
 skills-lock.json
+.agents/skills/vercel-react-best-practices/AGENTS.md
+
+.agents/
