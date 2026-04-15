@@ -51,6 +51,10 @@ export const AboutPage = () => {
         <AboutSection />
         <TechSection />
       </Container>
+      
+      {/* Spacer para separar el contenido del footer */}
+      <Box sx={{ height: 80 }} />
+      
       <Footer />
     </Box>
   );
