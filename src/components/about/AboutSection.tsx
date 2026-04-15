@@ -1,5 +1,7 @@
 import { Grid, Box, Typography, Button, Stack, Chip } from "@mui/material";
+import { Link } from "react-router-dom";
 import DownloadIcon from "@mui/icons-material/Download";
+import my_photo from "../../assets/my_photo.jpg";
 
 export const AboutSection = () => {
   return (
@@ -9,7 +11,7 @@ export const AboutSection = () => {
         <Box sx={{ position: "relative", maxWidth: 400, mx: "auto" }}>
           <Box
             component="img"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiOjaym-ny1MDTnxPAGmTry3G2Dh5WoUS9t0rlQb_4dlfzgrd3IN0fIoJtsEbtvlu9h-89J-y_5pgIvwQ_Nmuo5Q6soLj1611l8IjtsMxwCfNIE9KsTaUid48hmyj39sTFHMx7wbzRGEDfoZgQVdvgW1v1EjgeHgTyjTjd3HpCNgs5l04zRVom2UYx0BrFl4C81VbB6_MVmgbsujQxR3Fe-3TyY97iZZADbiK3yo_rC7Md20YrS40r8FkzAMloigpbrxozUfSbqg4"
+            src={my_photo}
             sx={{
               width: "100%",
               borderRadius: 3,
@@ -37,7 +39,7 @@ export const AboutSection = () => {
             }}
           >
             <Typography variant="h4" fontWeight={800}>
-              8+
+              1
             </Typography>
             <Typography variant="caption" sx={{ letterSpacing: 2 }}>
               YEARS EXP
@@ -60,21 +62,24 @@ export const AboutSection = () => {
           />
 
           <Typography variant="h3" fontWeight={800}>
-            Building digital experiences with{" "}
+            Desarrollador de software enfocado en crear experiencias web{" "}
             <Box component="span" color="primary.main">
-              precision.
+              modernas, rápidas y escalables.
             </Box>
           </Typography>
 
           <Typography color="#ffffff" fontSize={18}>
-            I am a Senior Full-Stack Developer passionate about crafting
-            high-performance web applications that merge elegant design with
-            robust engineering.
+            Desarrollador de software enfocado en crear experiencias web
+            modernas, rápidas y escalables. Trabajo principalmente con React,
+            TypeScript, Node.js y otras tecnologías del ecosistema web,
+            desarrollando interfaces limpias y soluciones full stack orientadas
+            a la experiencia del usuario.
           </Typography>
 
           <Typography color="#ffffff" fontSize={18}>
-            I focus on user experience and scalable architecture. Modern
-            software should work flawlessly and feel intuitive.
+            Me apasiona construir productos intuitivos y escalables, combinando
+            diseño, lógica de negocio y buenas prácticas de desarrollo para
+            crear soluciones funcionales, mantenibles y centradas en el usuario.
           </Typography>
 
           <Stack direction="row" spacing={3} flexWrap="wrap">
@@ -82,12 +87,14 @@ export const AboutSection = () => {
               variant="contained"
               size="large"
               startIcon={<DownloadIcon />}
+              href="/public/hv/CV Jefferson Lizarazu.pdf"
+              target="_blank"
             >
-              Download CV
+              Descargar HV
             </Button>
 
             <Button variant="outlined" size="large">
-              Get in touch
+              <Link to="/contact">Contacto</Link>
             </Button>
           </Stack>
         </Stack>
