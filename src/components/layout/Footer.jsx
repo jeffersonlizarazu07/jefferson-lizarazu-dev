@@ -10,7 +10,6 @@ export const Footer = () => {
     <Box
       sx={{
         borderTop: "1px solid rgba(255,255,255,0.1)",
-        py: 6,
       }}
     >
       <Container maxWidth="xl">
