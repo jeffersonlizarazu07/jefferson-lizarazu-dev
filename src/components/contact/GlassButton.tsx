@@ -22,7 +22,7 @@ export const GlassButton = () => {
         },
       }}
     >
-      Send Message
+      Enviar mensaje
     </Button>
   );
 };

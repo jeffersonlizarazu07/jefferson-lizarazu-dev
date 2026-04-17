@@ -1,23 +1,37 @@
+import { type FC } from "react";
 import { TextField } from "@mui/material";
 
-export const NeonField = ({
+interface NeonFieldProps {
+  label: string;
+  name: string;
+  color?: string;
+  inputColor?: string;
+  multiline?: boolean;
+  rows?: number;
+  type?: string;
+}
+
+export const NeonField: FC<NeonFieldProps> = ({
   label,
+  name,
   multiline = false,
   rows = 1,
   type = "text",
   color,
+  inputColor = "#ffffff",
 }) => {
   return (
     <TextField
       fullWidth
-      variant="outlined"
       label={label}
+      name={name}
       multiline={multiline}
       rows={rows}
       type={type}
       sx={{
         "& .MuiInputLabel-root": { color: color },
         "& .MuiInputLabel-root.Mui-focused": { color: color },
+        "& .MuiInputBase-input": { color: inputColor },
         "& .MuiOutlinedInput-root": {
           transition: "0.3s",
           "& fieldset": {

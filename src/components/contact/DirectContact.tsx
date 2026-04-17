@@ -5,6 +5,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ContactItem } from "./ContactItem";
 
 export const DirectContact = () => {
+  const emails = {
+    principal: "jeffersonlizarazu@hotmail.com",
+    secundario: "jeffersonliza21@gmail.com",
+  };
+
   return (
     <Stack spacing={4}>
       <Typography
@@ -13,19 +18,19 @@ export const DirectContact = () => {
         sx={{ display: "flex", alignItems: "center", color: "primary.main" }}
       >
         <RemoveIcon sx={{ width: "100px", fontSize: "80px" }} />
-        Direct Contact
+        Contacto directo
       </Typography>
 
       <Stack spacing={3}>
         <ContactItem
           icon={<EmailIcon sx={{ color: "#2b6cee" }} />}
-          title="Email Me"
-          value="jeffersonlizarazu@hotmail.com"
+          title="Correos electrónicos"
+          value={`${emails.principal} ${emails.secundario}`}
         />
 
         <ContactItem
           icon={<LocationOnIcon sx={{ color: "#2b6cee" }} />}
-          title="Location"
+          title="Localización actual"
           value="Bogotá D.C, Colombia"
         />
       </Stack>
