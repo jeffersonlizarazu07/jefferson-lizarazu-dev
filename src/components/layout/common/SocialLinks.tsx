@@ -2,35 +2,30 @@ import { Stack, Link, Typography } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { socialLinks } from "@/constants/socialLinks";
 
 type SocialLinksProps = {
   showLabels?: boolean;
 };
 
 export const SocialLinks = ({ showLabels = true }: SocialLinksProps) => {
-  const hrefLinks = {
-    github: "https://github.com/jeffersonlizarazu07",
-    linkedin: "https://www.linkedin.com/in/jefferson-lizarazu/",
-    email: "mailto:jeffersonlizarazu@hotmail.com?cc=jeffersonliza21@gmail.com",
-  };
-
   const socialLinksArray = [
     {
       Icon: GitHubIcon,
       label: "GitHub",
-      href: hrefLinks.github,
+      href: socialLinks.github,
       ariaLabel: "GitHub",
     },
     {
       Icon: LinkedInIcon,
       label: "LinkedIn",
-      href: hrefLinks.linkedin,
+      href: socialLinks.linkedin,
       ariaLabel: "LinkedIn",
     },
     {
       Icon: EmailIcon,
       label: "Correo electrónico",
-      href: hrefLinks.email,
+      href: socialLinks.email,
       ariaLabel: "Email",
     },
   ];
