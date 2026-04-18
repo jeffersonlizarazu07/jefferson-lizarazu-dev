@@ -1,4 +1,7 @@
-import { Box, Typography, Stack, Button } from "@mui/material";
+import { CVLink } from "@/constants/curriculumVitaeLink";
+import { Box, Typography, Stack, Button, Link } from "@mui/material";
+import { navLinksArray } from "@/constants/navLinksArray";
+import { Link as Router } from "react-router-dom";
 
 export const FreelanceSection = () => {
   return (
@@ -13,7 +16,9 @@ export const FreelanceSection = () => {
       </Typography>
 
       <Typography color="grey.400" maxWidth={600} mx="auto" mb={5}>
-        Actualmente me encuentro disponible como desarrollador freelance. Puedo ayudarte a convertir tu idea en una aplicación web funcional y escalable.
+        Actualmente me encuentro disponible como desarrollador freelance. Puedo
+        ayudarte a convertir tu idea en una aplicación web funcional y
+        escalable.
       </Typography>
 
       <Stack
@@ -21,11 +26,13 @@ export const FreelanceSection = () => {
         spacing={3}
         justifyContent="center"
       >
-        <Button variant="contained" size="large">
-          Start a Project
-        </Button>
-        <Button variant="outlined" size="large">
-          View Resume
+        <Link to={navLinksArray[3].to} component={Router} underline="none">
+          <Button variant="contained" size="large">
+            Iniciar Proyecto
+          </Button>
+        </Link>
+        <Button href={CVLink} variant="outlined" size="large" target="_blank">
+          Ver CV
         </Button>
       </Stack>
     </Box>

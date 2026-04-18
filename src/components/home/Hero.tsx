@@ -1,10 +1,18 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  Link,
+} from "@mui/material";
+import { Link as Router } from "react-router-dom";
 import CircleIcon from "@mui/icons-material/Circle";
-
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import { CodeImage } from "../home/CodeImage";
 import { SocialLinks } from "../layout/common/SocialLinks";
+import { navLinksArray } from "@/constants/navLinksArray";
 
 export const Hero = () => {
   return (
@@ -67,21 +75,33 @@ export const Hero = () => {
               </Typography>
 
               <Stack direction="row" spacing={3}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  endIcon={<ArrowForwardIcon />}
+                <Link
+                  to={navLinksArray[1].to}
+                  component={Router}
+                  underline="none"
                 >
-                  View My Work
-                </Button>
+                  <Button
+                    variant="contained"
+                    size="large"
+                    endIcon={<ArrowForwardIcon />}
+                  >
+                    Ver mis proyectos
+                  </Button>
+                </Link>
 
-                <Button
-                  variant="outlined"
-                  size="large"
-                  sx={{ color: "#ffffff" }}
+                <Link
+                  to={navLinksArray[3].to}
+                  component={Router}
+                  underline="none"
                 >
-                  Contact Me
-                </Button>
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    sx={{ color: "#ffffff" }}
+                  >
+                    Contactarme
+                  </Button>
+                </Link>
               </Stack>
               <SocialLinks />
             </Stack>

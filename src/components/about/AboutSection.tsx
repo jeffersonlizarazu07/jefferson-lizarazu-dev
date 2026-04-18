@@ -1,7 +1,17 @@
-import { Grid, Box, Typography, Button, Stack, Chip } from "@mui/material";
-import { Link } from "react-router-dom";
+import {
+  Grid,
+  Box,
+  Typography,
+  Button,
+  Stack,
+  Chip,
+  Link,
+} from "@mui/material";
+import { Link as Router } from "react-router-dom";
 import DownloadIcon from "@mui/icons-material/Download";
+import { CVLink } from "../../constants/curriculumVitaeLink";
 import my_photo from "../../assets/my_photo.jpg";
+import { navLinksArray } from "@/constants/navLinksArray";
 
 export const AboutSection = () => {
   return (
@@ -87,14 +97,20 @@ export const AboutSection = () => {
               variant="contained"
               size="large"
               startIcon={<DownloadIcon />}
-              href="/public/hv/CV Jefferson Lizarazu.pdf"
+              href={CVLink}
               target="_blank"
             >
               Descargar HV
             </Button>
 
             <Button variant="outlined" size="large">
-              <Link to="/contact">Contacto</Link>
+              <Link
+                to={navLinksArray[3].to}
+                component={Router}
+                underline="none"
+              >
+                Contacto
+              </Link>
             </Button>
           </Stack>
         </Stack>
