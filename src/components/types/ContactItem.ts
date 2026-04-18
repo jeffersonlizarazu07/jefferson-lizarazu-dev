@@ -1,7 +1,7 @@
 export interface ContactItemProps {
   icon: React.ReactNode;
   title: string;
-  value: string;
+  value: React.ReactNode;
   titleColor?: string;
   valueColor?: string;
 }

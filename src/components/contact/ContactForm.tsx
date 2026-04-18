@@ -56,7 +56,7 @@ export const ContactForm = () => {
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <NeonField label="Asunto" name="subject" color="#94a3b8" />
+            <NeonField label="Asunto" name="title" color="#94a3b8" />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
