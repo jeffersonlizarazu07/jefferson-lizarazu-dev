@@ -1,5 +1,6 @@
 import { Stack, StackProps, Link } from "@mui/material";
 import { Link as Router } from "react-router-dom";
+import { navLinksArray } from "../../../constants/navLinksArray";
 
 type NavLinksProps = {
   direction?: StackProps["direction"];
@@ -7,12 +8,6 @@ type NavLinksProps = {
 };
 
 export const NavLinks = ({ direction = "row", spacing = 4 }: NavLinksProps) => {
-  const navLinksArray = [
-    { to: "/", label: "Home" },
-    { to: "/projects", label: "Proyectos" },
-    { to: "/about", label: "Sobre mí" },
-    { to: "/contact", label: "Contacto" },
-  ];
 
   return (
     <Stack

@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { CVLink } from "../../constants/CurriculumVitaeLink";
 import { NavLinks } from "./common/NavLinks";
 
 export const Header = () => {
@@ -65,7 +66,9 @@ export const Header = () => {
             <IconButton color="inherit">
               <DarkModeIcon />
             </IconButton>
-            <Button variant="contained">Resume</Button>
+            <Button href={CVLink} variant="contained" target="_blank">
+              Resume
+            </Button>
           </Stack>
         </Toolbar>
       </Container>
