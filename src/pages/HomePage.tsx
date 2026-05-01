@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { Header } from "../components/layout/Header.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
+import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
 import { TechRow } from "../components/home/TechRow.js";
 import { Hero } from "../components/home/Hero.js";
 
