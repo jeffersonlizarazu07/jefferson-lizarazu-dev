@@ -49,7 +49,10 @@ export const ProjectsList = ({
   }
 
   // Fallback a logo del lenguaje cuando la imagen no carga (404)
-  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement>, language: string | null) => {
+  const handleImageError = (
+    event: React.SyntheticEvent<HTMLImageElement>,
+    language: string | null,
+  ) => {
     event.currentTarget.src = getLanguageLogo(language);
   };
 
@@ -87,9 +90,14 @@ export const ProjectsList = ({
                 alt={project.title}
                 onError={(e) => handleImageError(e, project.language)}
                 sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "100%",
+                  boxSizing: "border-box",
                   height: 320,
                   objectFit: "contain",
                   transition: "transform .5s ease",
+                  padding: 2,
                 }}
               />
 
