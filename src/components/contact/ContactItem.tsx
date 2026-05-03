@@ -5,8 +5,6 @@ export const ContactItem = ({
   icon,
   title,
   value,
-  titleColor = "#64748b",
-  valueColor = "#ffffff",
 }: ContactItemProps) => {
   return (
     <Stack
