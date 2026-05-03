@@ -1,4 +1,4 @@
-import {type ContactItemProps} from '../types/ContactItem'
+import type { ContactItemProps } from "@/types/Contact";
 import { Stack, Box, Typography } from '@mui/material';
 
 export const ContactItem = ({

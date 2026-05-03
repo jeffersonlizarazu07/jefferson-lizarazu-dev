@@ -10,7 +10,7 @@ import {
   CardActionArea,
 } from "@mui/material";
 import { getLanguageLogo } from "../../utils/languageLogos";
-import type { GitHubRepo } from "../../hooks/useGitHubRepos";
+import type { GitHubRepo } from "../../types/GitHub";
 
 // Recibe los proyectos DESDE Props (no del hook)
 type ProjectsListProps = {

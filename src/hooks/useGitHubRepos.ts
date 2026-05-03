@@ -1,26 +1,7 @@
 import { useState, useEffect } from "react";
+import type { GitHubRepo, UseGitHubReposReturn } from "@/types/GitHub";
 
-// ── Tipos explícitos ──────────────────────────────────────────────
-
-export interface GitHubRepo {
-  title: string;
-  description: string;
-  tech: string[];
-  url: string;
-  stars: number;
-  image: string;
-  language: string | null;
-}
-
-export interface UseGitHubReposReturn {
-  repos: GitHubRepo[];
-  filteredRepos: GitHubRepo[];
-  loading: boolean;
-  error: string | null;
-  technologies: string[];
-  filter: string;
-  setFilter: (filter: string) => void;
-}
+// ── Tipos internos (solo para el hook) ──────────────────────────────────────────────
 
 interface GitHubAPIResponse {
   name: string;
