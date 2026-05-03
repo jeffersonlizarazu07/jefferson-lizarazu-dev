@@ -8,8 +8,12 @@ export const Footer = () => {
 
   return (
     <Box
+      component="footer"
       sx={{
+        bgcolor: "#0B1623",
         borderTop: "1px solid rgba(255,255,255,0.1)",
+        py: 4,
+        color: "white",
       }}
     >
       <Container maxWidth="xl">
@@ -20,7 +24,7 @@ export const Footer = () => {
           spacing={2}
         >
           <Box>
-            <Typography variant="h6" fontWeight="bold">
+            <Typography variant="h6" fontWeight="bold" color="inherit">
               {name}
             </Typography>
 
@@ -34,7 +38,7 @@ export const Footer = () => {
           <SocialLinks showLabels={false} />
         </Stack>
         <Box pt={1.5}>
-          <Typography variant="caption">
+          <Typography variant="caption" color="grey.500">
             © {actualYear} {name}.
           </Typography>
         </Box>
