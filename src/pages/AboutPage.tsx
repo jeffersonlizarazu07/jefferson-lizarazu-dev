@@ -1,6 +1,4 @@
 import { Box, Container } from "@mui/material";
-import { Header } from "../components/layout/Header";
-import { Footer } from "../components/layout/Footer";
 import { AboutSection } from "../components/about/AboutSection";
 import { TechSection } from "../components/about/TechSection";
 
@@ -32,7 +30,6 @@ export const AboutPage = () => {
           borderRadius: "50%",
         }}
       />
-      <Header />
       <Box
         sx={{
           position: "absolute",
@@ -54,8 +51,6 @@ export const AboutPage = () => {
       
       {/* Spacer para separar el contenido del footer */}
       <Box sx={{ height: 80 }} />
-      
-      <Footer />
     </Box>
   );
 };

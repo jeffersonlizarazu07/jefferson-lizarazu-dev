@@ -1,6 +1,4 @@
 import { Box, Container, Grid } from "@mui/material";
-import { Header } from "../components/layout/Header";
-import { Footer } from "../components/layout/Footer";
 import { ContactForm } from "../components/contact/ContactForm";
 import { ContactSidebar } from "../components/contact/ContactSidebar";
 
@@ -19,7 +17,6 @@ export const ContactPage = () => {
         overflow: "hidden",
       }}
     >
-      <Header />
       {/* Watermark */}
       <Box
         sx={{
@@ -50,7 +47,6 @@ export const ContactPage = () => {
             <ContactSidebar />
           </Grid>
         </Grid>
-        <Footer />
       </Container>
 
       {/* Background Glow */}
