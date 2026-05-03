@@ -10,7 +10,7 @@ import {
 import { Link as Router } from "react-router-dom";
 import DownloadIcon from "@mui/icons-material/Download";
 import { CVLink } from "../../constants/curriculumVitaeLink";
-import my_photo from "../../assets/my_photo.jpg";
+import photo from "../../assets/photo.jpg";
 import { navLinksArray } from "@/constants/navLinksArray";
 
 export const AboutSection = () => {
@@ -21,7 +21,7 @@ export const AboutSection = () => {
         <Box sx={{ position: "relative", maxWidth: 400, mx: "auto" }}>
           <Box
             component="img"
-            src={my_photo}
+            src={photo}
             sx={{
               width: "100%",
               borderRadius: 3,
