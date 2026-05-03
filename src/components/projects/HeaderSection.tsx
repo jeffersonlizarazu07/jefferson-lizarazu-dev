@@ -24,7 +24,7 @@ export const HeaderSection = ({ technologies, filter, setFilter }: HeaderSection
       </Typography>
 
       {/* FILTER BUTTONS - DINÁMICOS BASADOS EN TECNOLOGÍAS */}
-      <Stack direction="row" spacing={2} flexWrap="wrap" mb={8}>
+      <Stack direction="row" flexWrap="wrap" mb={8} sx={{ gap: 2 }}>
         {/* Botón "Todos" siempre primero */}
         <Button 
           variant={filter === "Todos" ? "contained" : "outlined"}
@@ -36,6 +36,7 @@ export const HeaderSection = ({ technologies, filter, setFilter }: HeaderSection
         {/* Botones dinámicos por cada tecnología */}
         {technologies.map((tech) => (
           <Button
+          
             key={tech}
             variant={filter === tech ? "contained" : "outlined"}
             onClick={() => setFilter(tech)}
