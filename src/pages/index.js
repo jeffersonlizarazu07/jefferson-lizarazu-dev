@@ -1,5 +1,0 @@
-export {Home} from './home.jsx'
-export {NotFound} from './notFound.jsx'
-export {ProjectsPage} from './projectsPage.js'
-export {AboutPage} from './aboutPage.tsx'
-export {ContactPage} from './contactPage.tsx'
