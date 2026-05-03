@@ -45,3 +45,4 @@ skills-lock.json
 .atl/skill-registry.md
 scripts/check-responsive.cjs
 docs/RESPIVE-AUDIT.md
+docs/ARCHITECTURE-AUDIT.md
