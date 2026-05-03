@@ -5,25 +5,6 @@ import { TechRow } from "../components/home/TechRow.js";
 import { Hero } from "../components/home/Hero.js";
 
 export const HomePage = () => {
-  // const [repos, setRepos] = useState([]);
-  // const [data, setData] = useState([]);
-
-  // const getRepositories = async () => {
-  //   try {
-  //     const response =
-  //       await fetch`https://api.github.com/users/jeffersonlizarazu07/repos`;
-
-  //     const data = await response.json();
-  //     return data;
-  //   } catch {
-  //     const error = new Error("Repositorio no encontrado", error);
-  //   }
-  //   getRepositories();
-  // };
-  // console.log(data);
-
-  // const ThemeConfigCode = () => {
-  //   const symbolColor = "#89ddff";
 
   return (
     <Box
