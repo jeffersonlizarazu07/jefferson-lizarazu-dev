@@ -9,7 +9,7 @@ export const NotFoundPage = () => {
         alignItems: "center",
         height: "100vh",
         width: "100%",
-        fontSize: "4rem"
+        fontSize: { xs: "2rem", sm: "4rem" }
       }}
     >
       Not Found

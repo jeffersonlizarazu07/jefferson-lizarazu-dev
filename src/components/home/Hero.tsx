@@ -74,7 +74,7 @@ export const Hero = () => {
                 resolver problemas reales.
               </Typography>
 
-              <Stack direction="row" spacing={3}>
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={3}>
                 <Link
                   to={navLinksArray[1].to}
                   component={Router}

@@ -47,7 +47,7 @@ export const SocialChannels: FC = () => {
                 },
               }}
             >
-              <Stack direction="row" justifyContent="space-between">
+              <Stack direction={{ xs: "column", sm: "row" }} justifyContent="space-between">
                 <Box
                   sx={{
                     display: "flex",

@@ -10,8 +10,8 @@ export const TechRow = () => {
     >
       <Container maxWidth="xl">
         <Stack
-          direction="row"
-          spacing={8}
+          direction={{ xs: "column", sm: "row" }}
+          spacing={{ xs: 2, sm: 8 }}
           justifyContent="space-between"
           flexWrap="wrap"
           sx={{ opacity: 0.5 }}

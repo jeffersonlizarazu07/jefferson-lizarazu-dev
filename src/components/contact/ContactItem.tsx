@@ -8,9 +8,9 @@ export const ContactItem = ({
 }: ContactItemProps) => {
   return (
     <Stack
-      direction="row"
+      direction={{ xs: "column", sm: "row" }}
       spacing={3}
-      alignItems="center"
+      alignItems={{ xs: "flex-start", sm: "center" }}
       sx={{
         p: 2,
         borderRadius: 2,

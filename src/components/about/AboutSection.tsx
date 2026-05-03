@@ -92,7 +92,7 @@ export const AboutSection = () => {
             crear soluciones funcionales, mantenibles y centradas en el usuario.
           </Typography>
 
-          <Stack direction="row" spacing={3} flexWrap="wrap">
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={3} flexWrap="wrap">
             <Button
               variant="contained"
               size="large"

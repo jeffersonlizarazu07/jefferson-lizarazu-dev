@@ -130,7 +130,7 @@ export const ProjectsList = ({
                     {project.description}
                   </Typography>
 
-                  <Stack direction="row" spacing={1} flexWrap="wrap">
+                  <Stack direction={{ xs: "column", sm: "row" }} spacing={1} flexWrap="wrap">
                     {project.tech.map((tech, i) => (
                       <Chip
                         key={i}

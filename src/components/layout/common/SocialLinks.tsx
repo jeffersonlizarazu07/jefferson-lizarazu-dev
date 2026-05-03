@@ -32,8 +32,8 @@ export const SocialLinks = ({ showLabels = true }: SocialLinksProps) => {
 
   return (
     <Stack
-      direction="row"
-      spacing={4}
+      direction={{ xs: "column", sm: "row" }}
+      spacing={{ xs: 2, sm: 4 }}
       color="grey.500"
       sx={{
         "& a:hover": {

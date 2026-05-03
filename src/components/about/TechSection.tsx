@@ -49,7 +49,7 @@ export const TechSection = () => {
     <Box>
       <Stack spacing={10}>
         {/* Header */}
-        <Stack direction="row" alignItems="center" spacing={4}>
+        <Stack direction={{ xs: "column", md: "row" }} alignItems="center" spacing={{ xs: 2, md: 4 }}>
           <Box>
             <Typography variant="h4" fontWeight={800}>
               Mi Ecosistema
@@ -137,7 +137,7 @@ export const TechSection = () => {
                 justifyContent: "center",
               }}
             >
-              <Stack direction="row" spacing={2} alignItems="center">
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={2} alignItems="center">
                 <Typography variant="h2" fontWeight={800} color="primary.main">
                   1+
                 </Typography>
@@ -189,9 +189,9 @@ export const TechSection = () => {
                       >
                         <Stack spacing={2}>
                           <Stack
-                            direction="row"
+                            direction={{ xs: "column", sm: "row" }}
                             justifyContent="space-between"
-                            alignItems="center"
+                            alignItems={{ xs: "flex-start", sm: "center" }}
                           >
                             <Box>
                               <Chip
