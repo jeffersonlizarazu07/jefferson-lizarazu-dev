@@ -43,3 +43,5 @@ skills-lock.json
 .playwright-mcp/
 .windsurf/
 .atl/skill-registry.md
+scripts/check-responsive.cjs
+docs/RESPIVE-AUDIT.md
