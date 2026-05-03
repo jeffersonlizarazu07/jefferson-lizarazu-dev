@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { CVLink } from "../../constants/CurriculumVitaeLink";
+import { CVLink } from "../../constants/curriculumVitaeLink";
 import { NavLinks } from "./common/NavLinks";
 
 export const Header = () => {
