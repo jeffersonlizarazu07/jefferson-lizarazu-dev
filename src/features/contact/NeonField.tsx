@@ -18,7 +18,7 @@ export const NeonField: FC<NeonFieldProps> = ({
   rows = 1,
   type = "text",
   color,
-  inputColor = "#ffffff",
+  inputColor = "white",
 }) => {
   return (
     <TextField

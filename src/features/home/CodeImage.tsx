@@ -48,7 +48,7 @@ export const CodeImage = () => {
           />
           <Typography
             variant="caption"
-            sx={{ ml: 2, color: "#ffffff99", fontFamily: "monospace" }}
+            sx={{ ml: 2, color: "rgba(255,255,255,0.6)", fontFamily: "monospace" }}
           >
             ThemeConfig.ts
           </Typography>

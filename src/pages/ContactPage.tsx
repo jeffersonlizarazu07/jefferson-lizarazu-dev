@@ -1,6 +1,6 @@
 import { Box, Container, Grid } from "@mui/material";
-import { ContactForm } from "../features/contact/ContactForm";
-import { ContactSidebar } from "../features/contact/ContactSidebar";
+import { ContactForm } from "@/features/contact/ContactForm";
+import { ContactSidebar } from "@/features/contact/ContactSidebar";
 
 export const ContactPage = () => {
   return (

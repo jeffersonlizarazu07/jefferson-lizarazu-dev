@@ -49,7 +49,7 @@ try {
       <Box component="form" ref={formRef} onSubmit={sendEmail}>
         <Grid container spacing={4}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <NeonField label="Nombre" name="from_name" color="#94a3b8" />
+            <NeonField label="Nombre" name="from_name" color="grey.500" />
           </Grid>
 
           <Grid size={{ xs: 12, md: 6 }}>
@@ -57,12 +57,12 @@ try {
               label="Correo Electrónico"
               name="from_email"
               type="email"
-              color="#94a3b8"
+              color="grey.500"
             />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <NeonField label="Asunto" name="title" color="#94a3b8" />
+            <NeonField label="Asunto" name="title" color="grey.500" />
           </Grid>
 
           <Grid size={{ xs: 12 }}>
@@ -71,7 +71,7 @@ try {
               name="message"
               multiline
               rows={5}
-              color="#94a3b8"
+              color="grey.500"
             />
           </Grid>
 

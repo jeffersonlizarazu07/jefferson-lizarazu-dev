@@ -47,7 +47,7 @@ export const DirectContact: FC = () => {
                   <Link
                     href={email.href}
                     underline="none"
-                    sx={{ color: "#ffffff" }}
+                    sx={{ color: "white" }}
                   >
                     {email.label}
                   </Link>
