@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { TechRow } from "../components/home/TechRow.js";
-import { Hero } from "../components/home/Hero.js";
+import { TechRow } from "../features/home/TechRow.js";
+import { Hero } from "../features/home/Hero.js";
 
 export const HomePage = () => {
 

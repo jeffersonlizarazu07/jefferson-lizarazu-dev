@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
-import { AboutSection } from "../components/about/AboutSection";
-import { TechSection } from "../components/about/TechSection";
+import { AboutSection } from "../features/about/AboutSection";
+import { TechSection } from "../features/about/TechSection";
 
 export const AboutPage = () => {
   return (
