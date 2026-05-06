@@ -1,13 +1,10 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 
+const TECH_STACK = ["REACT", "EXPRESS", "JAVA", "VITE", "TAILWIND", "VERCEL"];
+
 export const TechRow = () => {
   return (
-    <Box
-      sx={{
-        borderTop: "1px solid rgba(255,255,255,0.1)",
-        py: 10,
-      }}
-    >
+    <Box sx={{ borderTop: "1px solid rgba(255,255,255,0.1)", py: 10 }}>
       <Container maxWidth="xl">
         <Stack
           direction={{ xs: "column", sm: "row" }}
@@ -16,12 +13,9 @@ export const TechRow = () => {
           flexWrap="wrap"
           sx={{ opacity: 0.5 }}
         >
-          <Typography variant="h6">REACT</Typography>
-          <Typography variant="h6">EXPRESS</Typography>
-          <Typography variant="h6">JAVA</Typography>
-          <Typography variant="h6">VITE</Typography>
-          <Typography variant="h6">TAILWIND</Typography>
-          <Typography variant="h6">VERCEL</Typography>
+          {TECH_STACK.map((tech) => (
+            <Typography key={tech} variant="h6">{tech}</Typography>
+          ))}
         </Stack>
       </Container>
     </Box>

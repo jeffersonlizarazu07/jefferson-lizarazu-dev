@@ -6,11 +6,6 @@ import { ContactHeader } from "./ContactHeader";
 import emailjs from "@emailjs/browser";
 import { config } from "@/config";
 
-// Variables de entorno tipadas
-const PUBLIC_KEY_EMAILJS = import.meta.env.VITE_API_KEY_EMAILJS as string;
-const OUTLOOK_SERVICE_ID = import.meta.env.VITE_OUTLOOK_SERVICE_ID as string;
-const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID as string;
-
 export const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
